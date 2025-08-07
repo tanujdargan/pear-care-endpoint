@@ -15,9 +15,9 @@ def initialize_model():
     """
     global model, tokenizer
 
-    # Use an environment variable for the model path for flexibility
-    # This allows us to use a network volume for caching the model
-    model_name_or_path = os.environ.get("MODEL_PATH", "google/medgemma-27b")
+    # Use network storage path for the pre-downloaded model
+    # This avoids downloading the model on every cold start
+    model_name_or_path = os.environ.get("MODEL_PATH", "/models/medgemma-27b")
     hf_token = os.environ.get("HF_TOKEN")
 
     if not hf_token:

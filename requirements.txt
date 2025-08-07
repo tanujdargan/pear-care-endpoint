@@ -1,6 +1,10 @@
-runpod
-torch
-transformers
-accelerate
-bitsandbytes
-einops
+# Core dependencies with specific versions for reproducibility
+runpod==1.6.2
+transformers==4.41.2
+accelerate==0.30.1
+bitsandbytes==0.43.1
+einops==0.8.0
+
+# Additional optimizations
+safetensors==0.4.3
+huggingface-hub==0.23.2
